@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --swiper-pagination-bottom: -30px;
+      }
+      .wrapper {
+        width: 70%;
+        position: relative;
+      }
+      .mySwiper {
+        width: 90%;
+        height: 60%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-grow: 1;
+        background: #0e71b8;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: calc(100% -80px);
+        object-fit: cover;
+      }
+
+      .slide-caption {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 80px;
+        overflow-wrap: break-word;
+        padding: 15px;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: "Nunito", sans-serif;
+      }
+
+      .swiper-pagination {
+        bottom: -35px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      @media screen and (min-width: 368px) {
+        .wrapper {
+          width: 100%;
+        }
+        .swiper-slide {
+          max-width: 300px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .swiper-slide {
+          max-width: 500px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .nav {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="wrapper">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/src/img/short1.jpg" />
+            <div class="slide-caption">
+              Відповідаємо на ваші запитання. Частина 2
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short1.jpg" />
+            <div class="slide-caption">Енергоефективність в дрібницях</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short2.jpg" alt="" />
+            <div class="slide-caption">Фасадний декор від «Валькірія»</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short3.jpg" alt="" />
+            <div class="slide-caption">Питання-відповіді. Частина 1.</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short4.jpg" alt="" />
+            <div class="slide-caption">Як перевірити якість термоблоків?</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short5.jpg" alt="" />
+            <div class="slide-caption">5 причин обрати термоблоки</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short6.jpg" alt="" />
+            <div class="slide-caption">Монолітний пояс одразу з утепленням</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short7.jpg" alt="" />
+            <div class="slide-caption">
+              Розбірний блок — практичне рішення для стрічкового фундаменту
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short8.jpg" alt="" />
+            <div class="slide-caption">
+              Як поводить себе термобудинок через 5 років?
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short9.jpg" alt="" />
+            <div class="slide-caption">Як будується басейн з термоблоків?</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short10.jpg" alt="" />
+            <div class="slide-caption">
+              Термоблок — це не лише тепло та енергоефективність, а й свобода
+              дизайну.
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short11.jpg" alt="" />
+            <div class="slide-caption">
+              Перший ряд термоблоків задає точність усієї конструкції.
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short12.jpg" alt="" />
+            <div class="slide-caption">Будівництво набирає обертів!</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short13.jpg" alt="" />
+            <div class="slide-caption">
+              Будувати з термоблоків швидше, аніж з цегли?
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">KyivBuild 2025: як це було!</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              Міжповерхове перекриття з плит: 3 ключові поради для ідеального
+              результату
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              Плануєте будівництво у 2025? Три ключові речі, які зроблять процес
+              легшим!
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short4.jpg" alt="" />
+            <div class="slide-caption">
+              Переваги термобудинку на основі реального об'єкту
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short5.jpg" alt="" />
+            <div class="slide-caption">Будівництво триває</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short6.jpg" alt="" />
+            <div class="slide-caption">
+              Будівництво з термоблоків має свої нюанси
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short7.jpg" alt="" />
+            <div class="slide-caption">Розвінчуємо міфи про термоблоки!</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short8.jpg" alt="" />
+            <div class="slide-caption">
+              Утеплюй стіни правильно: мінвата чи пінопласт?
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short9.jpg" alt="" />
+            <div class="slide-caption">Будуємо новий обʼєкт з термоблоків</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short10.jpg" alt="" />
+            <div class="slide-caption">
+              Кажуть, будівництво взимку неможливе?
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short11.jpg" alt="" />
+            <div class="slide-caption">
+              Будуй Термодім правильно: зведення стін (Частина 1)
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/img/short12.jpg" alt="" />
+            <div class="slide-caption">
+              Будуй Термодім правильно: зведення стін (Частина 2)
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              Добавка у бетон: як будувати при -15?
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              Захищаємо замки термоблоків від бетону!
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              Труби всередині стін — практично та естетично!
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              Правильне армування - це одна з основ міцності Вашого будинку!
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">Термоблоки — термос для бетону!</div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">
+              <p>Термодім — твій вибір для економії та швидкого будівництва!</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="" alt="" />
+            <div class="slide-caption">Термобудинок через 15 років</div>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+
+          1920: {
+            slidesPerView: 5,
+            spaceBetween: 60,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
