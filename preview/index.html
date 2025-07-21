@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --swiper-pagination-bottom: -30px;
+      }
+      .shorts {
+        width: 100%;
+        position: relative;
+      }
+      .swiper-shorts {
+        width: 90%;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-grow: 1;
+        background: #0e71b8;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: calc(100% -80px);
+        object-fit: cover;
+      }
+
+      .slide-caption {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 80px;
+        padding: 15px;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: "Nunito", sans-serif;
+      }
+
+      .swiper-pagination {
+        bottom: -40px;
+      }
+
+      .slider-navigation {
+        display: none;
+      }
+
+      .slide-caption a {
+        overflow-wrap: break-word;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .slide-caption a:hover {
+        text-decoration: underline;
+      }
+
+      @media screen and (min-width: 368px) {
+        .swiper-slide {
+          max-width: 300px;
+        }
+
+        .swiper-slide {
+          font-size: 16px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .swiper-slide {
+          max-width: 600px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .slider-navigation {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="shorts">
+      <div class="swiper swiper-shorts">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short1.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Відповідаємо на ваші запитання. Частина 2</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short2.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Енергоефективність в дрібницях</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short3.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Фасадний декор від «Валькірія»</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short4.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Питання-відповіді. Частина 1</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short5.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Як перевірити якість термоблоків?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short6.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">5 причин обрати термоблоки</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short7.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Монолітний пояс одразу з утепленням</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short8.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#"
+                >Розбірний блок — практичне рішення для стрічкового
+                фундаменту</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short9.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Як поводить себе термобудинок через 5 років?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short10.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Як будується басейн з термоблоків?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short11.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#"
+                >Термоблок — це не лише тепло та енергоефективність, а й свобода
+                дизайну</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short12.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#"
+                >Перший ряд термоблоків задає точність усієї конструкції</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short13.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Будівництво набирає обертів!</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short14.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Будувати з термоблоків швидше, аніж з цегли?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short15.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">KyivBuild 2025: як це було!</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short16.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">
+                Міжповерхове перекриття з плит: 3 ключові поради для ідеального
+                результату</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short17.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">
+                Плануєте будівництво у 2025? Три ключові речі, які зроблять
+                процес легшим!</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short18.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Переваги термобудинку на основі реального об'єкту</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short19.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Будівництво триває</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short20.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Будівництво з термоблоків має свої нюанси</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short21.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Розвінчуємо міфи про термоблоки!</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short22.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Утеплюй стіни правильно: мінвата чи пінопласт?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short23.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Будуємо новий обʼєкт з термоблоків</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short24.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Кажуть, будівництво взимку неможливе?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short25.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#"
+                >Будуй Термодім правильно: зведення стін (Частина 1)</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short26.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#"
+                >Будуй Термодім правильно: зведення стін (Частина 2)</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short27.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Добавка у бетон: як будувати при -15?</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short28.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Захищаємо замки термоблоків від бетону!</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short29.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Труби всередині стін — практично та естетично!</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short30.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">
+                Правильне армування - це одна з основ міцності Вашого
+                будинку!</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short31.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Термоблоки — термос для бетону!</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short32.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#"
+                >Термодім — твій вибір для економії та швидкого будівництва!</a
+              >
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="/src/img/short33.jpg" />
+            </a>
+            <div class="slide-caption">
+              <a href="#">Термобудинок через 15 років</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-navigation">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-shorts", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          368: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+
+          1920: {
+            slidesPerView: 5,
+            spaceBetween: 60,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
